@@ -10,6 +10,6 @@ my first implementation of markov chains using a simple 2 dimensional array
 
 window size of two charecters, uses hashmaps
 
-##variable
+## variable
 
 variable window size (charecters), uses hashmaps
