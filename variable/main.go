@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const SIZE int = 6
+const SIZE int = 8
 
 type stateMatrix struct {
 	state map[[SIZE]byte]map[byte]float64
@@ -14,7 +14,7 @@ type stateMatrix struct {
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
-	input := loadText("../input/newhope.txt")
+	input := loadText("../input/bravenewworld.txt")
 	model := stateMatrix{state: make(map[[SIZE]byte]map[byte]float64)}
 	train(model.state, input)
 	// fmt.Println(model.generate())
@@ -22,7 +22,7 @@ func main() {
 }
 
 func (m stateMatrix) generate() string {
-	inputStr := `A long time ago, in a galaxy far, far, away...`
+	inputStr := "I ventured to think"
 	nxt := []byte(inputStr)
 	seed := [SIZE]byte{} //{69, 109}
 	for i := 0; i < SIZE; i++ {
